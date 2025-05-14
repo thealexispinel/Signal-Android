@@ -5,6 +5,12 @@ import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.runBlocking
 import java.io.FileNotFoundException
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}
+
 plugins {
   alias(libs.plugins.android.application) apply false
   alias(libs.plugins.jetbrains.kotlin.android) apply false
